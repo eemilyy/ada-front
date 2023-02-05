@@ -13,12 +13,7 @@ import { useState } from 'react';
 
 
 import SignUpForms from "./signUp-forms/signUp-forms";
-import Input from './../../components/input/input';
 import './signUp-personal-info.scss';
-
-
-
-
 
 
 function SignUp() {
@@ -29,7 +24,7 @@ function SignUp() {
 	const [senhaConfirm, setSenhaConfirm] = useState("");
 	const [nome, setNome] = useState("");
 	const [tipo, setTipo] = useState("");
-	const [cpf, setCpf] = useState("");
+	const [cpfCnpj, setCpfCnpj] = useState("");
 	const [telefone, setTelefone] = useState("");
 	const [cep, setCep] = useState("");
 	const [estado, setEstado] = useState("");
@@ -49,6 +44,38 @@ function SignUp() {
 			console.log(error);
 		})
 	}
+
+	const getCEP = async (e) => {
+
+		const cep = e.target.value.replace(/\D/g, '');
+		const url = `https://viacep.com.br/ws/${cep}/json`;
+		const options = {
+			method: "GET",
+			mode: "cors",
+			headers: {
+				'content-type': 'application/json;charset=utf-8',
+			}
+		}
+		
+		
+		fetch(url, options).then(
+			response => response.json()
+		).then(
+			data => {
+				console.log(data)
+				setCidade(data.localidade);
+				setRua(data.logradouro);
+				setEstado(data.uf);
+				setBairro(data.bairro);
+			},
+			document.getElementById("numero").focus(),
+			//document.getElementById("numero")
+		)
+		
+
+	}
+
+		
 
 	return (
 		<>
@@ -142,9 +169,23 @@ function SignUp() {
 					
 
 					<div className="input-fields">
-						<Input label="Nome completo"></Input>
-						<Input label="CPF/CNPJ"></Input>
-						<Input label="Telefone"></Input>
+						{/*Nome*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Nome Completo </label>
+							<input placeholder= "Nome Completo" value={nome} onChange={(e)=> setNome(e.target.value)}/>
+						</div>
+
+						{/*CPF/CNPJ*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> CPF ou CNPJ </label>
+							<input placeholder= "CPF/CNPJ" value={cpfCnpj} onChange={(e)=> setCpfCnpj(e.target.value)}/>
+						</div>
+						{/*CPF/CNPJ*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Telefone </label>
+							<input placeholder= "Telefone" value={telefone} onChange={(e)=> setTelefone(e.target.value)}/>
+						</div>
+
 					</div>
 
 					<div className="d-flex justify-content-end buttons-line">
@@ -159,15 +200,40 @@ function SignUp() {
 
 				<div className="input-fields d-flex">
 					<div className="right-address-inputs">
-						<Input label="CEP*"></Input>
-						<Input label="Cidade*"></Input>
-						<Input label="Rua*"></Input>
+						{/*CEP*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> CEP </label>
+							<input placeholder= "Cep" value={cep} maxlength="10" onBlur={getCEP} onChange={(e)=> setCep(e.target.value)} />
+						</div>
+						{/*Cidade*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Cidade </label>
+							<input placeholder= "Cidade" value={cidade}  onChange={(e)=> setCidade(e.target.value)} />
+						</div>
+						{/*rua*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Rua </label>
+							<input placeholder= "Rua" value={rua}  onChange={(e)=> setRua(e.target.value)} />
+						</div>
 					</div>
 
 					<div className="left-address-inputs">
-						<Input label="Estado*"></Input>
-						<Input label="Bairro*"></Input>
-						<Input label="Número*"></Input>
+						{/*estado*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Estado </label>
+							<input placeholder= "Rua" value={estado}  onChange={(e)=> setEstado(e.target.value)} />
+						</div>						
+						{/*bairro*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Bairro </label>
+							<input placeholder= "Bairro" value={bairro}  onChange={(e)=> setBairro(e.target.value)} />
+						</div>
+						{/*numero*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Número </label>
+							<input placeholder= "Número" value={numero} id="numero" onChange={(e)=> setNumero(e.target.value)} />
+						</div>
+
 					</div>
 
 
