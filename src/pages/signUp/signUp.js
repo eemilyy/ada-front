@@ -11,6 +11,7 @@ import { useState } from 'react';
 
 
 
+
 import SignUpForms from "./signUp-forms/signUp-forms";
 import Input from './../../components/input/input';
 import './signUp-personal-info.scss';
@@ -124,7 +125,8 @@ function SignUp() {
 			)}
 			{step === 2 && (
 				<div className="container">
-					<SignUpForms loadingProgress={50}></SignUpForms>
+					<SignUpForms loadingProgress={60}></SignUpForms>
+					
 
 					<div className="input-fields">
 						<Input label="Nome completo"></Input>

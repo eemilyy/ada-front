@@ -1,9 +1,10 @@
 import './signUp-forms.scss';
-import loadingProgress50 from '../../../assets/images/loading-signup-50.svg';
-import loadingProgress100 from '../../../assets/images/loading-signup-100.svg';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 
 function SignUpForms({ loadingProgress }) {
+
     return (
         <div>
 
@@ -21,6 +22,9 @@ function SignUpForms({ loadingProgress }) {
                     <h3 className="font-h3-32-ubuntu form-title"> Informações Pessoais </h3>
                 </div>
 
+                <div style={{ width: 200, height: 200}} className="mt-5">
+                    {loadingProgress === 60 ? <CircularProgressbar value={66} /> : <CircularProgressbar value={100} />}
+                </div>
             </div>
         </div>
     )
