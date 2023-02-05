@@ -10,14 +10,14 @@
     width: 180px;
     height: 56px;
 
-    background: $color-dark-01;
+    background: $color-light-blue-01;
     border: 2px solid $color-light-01;
     border-radius: 5px;
 
-    color: $color-light-01;
+    color: $color-dark-01;
 }
 
 .back:hover{
-    background: $color-light-01;
+    background: #00689c;
     color: $color-dark-01;
 }

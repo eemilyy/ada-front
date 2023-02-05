@@ -1,9 +1,13 @@
 import './profile.scss';
 import '../../stylesheets/_fonts.scss'
+import HeaderSignUp from '../../components/header/header'
+import BackButton from '../../components/buttons/backButton/BackButton';
+
 
 function Profile() {
     return (
         <>
+            <HeaderSignUp></HeaderSignUp>
             <div className="page-content page-container">
                 <div className="padding">
                     <div className="row profile-container d-flex justify-content-center font-subtitle-16-500-ubuntu">
@@ -20,7 +24,7 @@ function Profile() {
                                     </div>
                                     <div className="col-sm-8">
                                         <div className="card-block">
-                                            <h6 className="m-b-20 p-b-5 b-b-default f-w-600">Informações</h6>
+                                            <h6 className="m-b-20 p-b-5 b-b-default f-w-600 font-subtitle-24-ubuntu">Informações</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
@@ -35,7 +39,7 @@ function Profile() {
                                                     <h6 className="text-muted f-w-400">98979989898</h6>
                                                 </div>
                                             </div>
-                                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Endereço</h6>
+                                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 font-subtitle-24-ubuntu">Endereço</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Rua</p>
@@ -62,7 +66,12 @@ function Profile() {
                                                     <h6 className="text-muted f-w-400">Dinoter husainm</h6>
                                                 </div>
                                             </div>
+                                            <div className='mt-5 d-flex flex-row-reverse'>
+                                                <BackButton></BackButton>
+
+                                            </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
