@@ -1,15 +1,12 @@
 @import '../../../App.scss';
 
-.container {
-    min-height: 468px;
-}
 
 Input {
     margin-bottom: 14px;
 }
 
 .text-grey {
-    color:$color-primary-grey-00;
+    color:$color-dark-01;
 }
 
 .font-weigth-400 {
@@ -17,7 +14,18 @@ Input {
 }
 
 .external-links {
-    color: $color-link-01;
+    color: $color-light-blue-01;
     text-decoration: none;
     cursor: pointer;
+}
+
+.check-input {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin: 0px 5px 0px 0px;
+}
+
+.space {
+    justify-content: space-between;
 }

@@ -7,7 +7,7 @@ body {
   font-weight: bolder;
   font-size: 16px;
   line-height: 19px;
-  background-color: $color-dark-01;
+  background-color: $color-light-01;
 }
 
 .App {
@@ -100,12 +100,12 @@ body {
 }
 
 .primary-grey-text-color {
-  color: $color-primary-grey-00;
+  color: $color-dark-01;
 }
 
 .link {
   text-decoration: none;
-  color: $color-primary-grey-00;
+  color: $color-dark-02;
   cursor: pointer;
 
   &:hover {

@@ -1,28 +1,31 @@
 @import '../../stylesheets/_colors.scss';
 
+
+
 .sign-up-container {
   .main_signup {
     border-radius: 5px;
     width: 408px;
-    height: 338px;
+    box-shadow: 2px 2px 10px $color-ligth-grey-01;
+
   }
 
   .color_gray {
-    background: $color-dark-gray-02;
+    background: $color-light-02;
   }
 
   .forgot_password {
-    color: $color-link-01;
+    color: $color-dark-02;
   }
 
   .login_text {
-    color: $color-light-01;
+    color: $color-dark-01;
   }
 
   .ouline {
     display: flex;
     flex-direction: row;
-    color: $color-light-01;
+    color: $color-dark-01;
   }
 
   .ouline:before,
@@ -41,7 +44,7 @@
   }
 
   .signup {
-    color: $color-light-purple-01;
+    color: $color-light-blue-01;
     margin-bottom: 110px;
   }
 

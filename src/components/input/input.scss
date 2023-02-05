@@ -3,7 +3,7 @@
 label {
     font-size: 5px;
     margin-bottom: 10px;
-    color: $color-light-01;
+    color: $color-dark-01;
 }
 
 input {
@@ -14,9 +14,9 @@ input {
     height: 56px;
     border-radius: 5px;
     background-color: rgba(0,0,0,0); 
-    color: white; 
+    color: $color-dark-01; 
     box-shadow: none;
-    border: 1px solid #CBCBCB;
+    border: 2px solid #CBCBCB;
 
     &:not(:active) {
         opacity: 0.4;

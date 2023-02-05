@@ -58,7 +58,7 @@ function Login() {
 							}}>
 							<div className="d-flex color_gray">
 								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
-								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password color_gray">Esqueceu sua senha?</Link>
+								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password ">Esqueceu sua senha?</Link>
 							</div>
 							<Input type="password"/>
 						</div>
@@ -70,7 +70,7 @@ function Login() {
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 				</div>
 			</div>
-			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2 text-white" >Novo por aqui?&nbsp;
+			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2" >Novo por aqui?&nbsp;
 				<Link to="/signup" className="font-body-20-700-roboto signup">Cadastre-se</Link>
 			</div>
 		</>

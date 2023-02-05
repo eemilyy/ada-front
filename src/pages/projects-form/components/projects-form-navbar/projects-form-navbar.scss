@@ -10,7 +10,7 @@
     .project-image {
         width: 242px;
         height: 201px;
-        background-color: $color-light-gray-01;
+        background-color: $color-dark-02;
         margin-bottom: 21px;
     }
 
@@ -24,12 +24,12 @@
         margin-bottom: 223px;
 
         .navbar-item {
-            color: $color-light-gray-01;
+            color: $color-dark-01;
 
             path,
             svg {
                 margin-right: 15px;
-                fill: $color-light-gray-01;
+                fill: $color-dark-01;
             }
 
             &:hover {
@@ -43,7 +43,7 @@
     }
 
     .delete-button {
-        background-color: $color-icon-like-01;
+        background-color: $color-dark-01;
         margin-top: 24px;
     }
 }

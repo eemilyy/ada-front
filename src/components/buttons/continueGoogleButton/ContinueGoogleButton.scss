@@ -3,20 +3,17 @@
 .continueGoogle{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    border: none;
-    padding: 0px 40px 0px 17px;
-
-
+    border: solid 2px $color-light-blue-01;
+    padding: 0px 20px 0px 20px;
     width: 312px;
     height: 56px;
-
-    background-color: $color-light-01;
-    color: $color-dark-01;
+    background-color: #f2f5ff;
+    color: $color-light-blue-01;
     border-radius: 5px;
 }
 
 .continueGoogle:hover{
-    background-color: #CBCBCB;
+    background-color: #0099e538;
 }

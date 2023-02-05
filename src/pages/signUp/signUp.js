@@ -29,7 +29,7 @@ function SignUp() {
  	   
 			<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
-			<div className='mx-auto text-white teste'>
+			<div className='mx-auto teste'>
 				<div className='container p-5 main_signup color_gray'>
 					<div className="mb-4 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
@@ -38,8 +38,8 @@ function SignUp() {
 					</div>
 				</div>
 			</div>
-			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2 text-white" >Já tem conta?&nbsp;
-				<Link to="/login" className="link font-body-20-700-roboto signup">Faça login</Link>
+			<div className="font-body-20-700-roboto d-flex justify-content-center mt-4 p-2" >Já tem conta?&nbsp;
+				<Link to="/login" className="font-body-20-700-roboto signup">Faça login</Link>
 			</div>
 		</div>
 	);

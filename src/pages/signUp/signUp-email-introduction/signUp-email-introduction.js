@@ -12,8 +12,26 @@ function SignUpEmailIntroduction() {
 
             <p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
-            <div className='mx-auto text-white'>
+            <div className='mx-auto'>
                 <div className='container p-5 main_signup color_gray'>
+                    
+                    <div className='d-flex justify-content-between mb-3'>
+
+                        <div className='justify-content-center'>
+                            <input className="check-input" type="radio" name="user_type" id="employer" />
+                            <label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio1">Sou empreendedor</label>
+                        </div>                        
+                    
+                        <div>
+
+                            <input className="check-input" type="radio" name="user_type" id="student" />
+                            <label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio2">Sou Estudante</label>
+                        </div>
+                        
+                    </div>
+
+
+
                     <Input label="Email"></Input>
                     <Input type="password" label="Senha"></Input>
                     <Input type="password" label="Repetir senha"></Input>
@@ -22,9 +40,10 @@ function SignUpEmailIntroduction() {
                     </div>
                 </div>
             </div>
-            <div className="bottom_text text-white d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">
+            <div className="bottom_text d-flex justify-content-center font-body-20-700-roboto mt-4 p-2">
                 Já tem conta?
-                <a href='?#' className="link signup font-body-20-700-roboto">&nbsp;Faça login</a></div>
+                <a href='?#' className="signup font-body-20-700-roboto">&nbsp;Faça login</a>
+            </div>
             <div className="d-flex justify-content-center text-grey font-body-16-roboto font-weigth-400">
                 Ao criar uma conta você concorda com os
                 <a className="external-links" href='/'>&nbsp;Termos de Serviço.</a>
