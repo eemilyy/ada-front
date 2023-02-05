@@ -1,0 +1,9 @@
+@import "../../../stylesheets/colors";
+
+.btn-cancel {
+    border: solid 3px $color-warning-pink-01;
+    background-color: transparent;
+    color: $color-warning-pink-01;
+    font-weight: bold;
+    width: 100px;
+}

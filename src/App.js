@@ -26,6 +26,7 @@ import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPass
 import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
 import Profile from './pages/profile/profile';
+import CreateProject from './pages/projects-form/components/form-card/form-card';
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/project/new" element={<CreateProject/>}/>
 
 
           {/*Exemplos de uso dos botoes*/}

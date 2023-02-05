@@ -1,0 +1,20 @@
+@import '../../../../stylesheets/colors';
+
+
+.project-container {
+    border-radius: 8px;
+    background-color: $color-light-02;
+    width: 400px;
+    height: 450px;
+    padding-top: 25px;
+    box-shadow: 2px 2px 10px $color-ligth-grey-01;
+    margin: auto;
+}
+
+.m-b-20 {
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: white;
+}

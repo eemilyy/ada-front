@@ -61,7 +61,7 @@ function SignUp() {
 				
 					<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
-					<div className='mx-auto teste'>
+					<div className='mx-auto'>
 						<div className='container p-5 main_signup color_gray'>
 							<div className="mb-4 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
 							<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
