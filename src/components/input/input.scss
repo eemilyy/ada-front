@@ -16,7 +16,7 @@ input {
     background-color: rgba(0,0,0,0); 
     color: $color-dark-01; 
     box-shadow: none;
-    border: 2px solid #CBCBCB;
+    border: 2px solid $color-dark-01;
 
     &:not(:active) {
         opacity: 0.4;

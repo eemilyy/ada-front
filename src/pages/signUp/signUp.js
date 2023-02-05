@@ -86,7 +86,7 @@ function SignUp() {
 						<div className='d-flex justify-content-between mb-3'>
 	
 							<div className='justify-content-center'>
-								<input className="check-input" type="radio" name="user_type" id="employer" />
+								<input className="check-input" type="radio" name="user_type" id="employer" checked />
 								<label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio1">Sou empreendedor</label>
 							</div>                        
 						

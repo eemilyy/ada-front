@@ -11,7 +11,7 @@ function LandingPage() {
                 <p className="font-subtitle-24-500-ubuntu"> Metus nisl condimentum egestas nulla sed mus eget mi tortor. </p>
 
                 <div className="d-flex align-items-center center-buttons">
-                    <LoginNavButton> Financiar </LoginNavButton>
+                    <LoginNavButton> Cadastrar </LoginNavButton>
                     <div className="text-header font-button-20-ubuntu link center-link"> Saiba mais </div>
                 </div>
             </div>

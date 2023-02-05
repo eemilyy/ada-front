@@ -37,7 +37,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: $color-light-blue-01
 }
 
 @keyframes App-logo-spin {
@@ -64,9 +64,12 @@ body {
 }
 
 .text-link-grey {
-  color: $color-light-02;
+  color: $color-light-blue-01;
 }
 
+.link {
+  color: $color-light-blue-01 !important;
+}
 .btn {
   //color: $color-light-gray01;
   height: 65px;
