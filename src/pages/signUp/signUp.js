@@ -25,7 +25,9 @@ function SignUp() {
 
 	const [email, setEmail] = useState("");
 	const [senha, setSenha] = useState("");
+	const [senhaConfirm, setSenhaConfirm] = useState("");
 	const [nome, setNome] = useState("");
+	const [tipo, setTipo] = useState("");
 	const [cpf, setCpf] = useState("");
 	const [telefone, setTelefone] = useState("");
 	const [cep, setCep] = useState("");
@@ -86,23 +88,34 @@ function SignUp() {
 						<div className='d-flex justify-content-between mb-3'>
 	
 							<div className='justify-content-center'>
-								<input className="check-input" type="radio" name="user_type" id="employer" checked />
+								<input className="check-input" type="radio" name="user_type" id="employer" onChange={() => setTipo("employer")} />
 								<label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio1">Sou empreendedor</label>
 							</div>                        
 						
 							<div>
 	
-								<input className="check-input" type="radio" name="user_type" id="student" />
+								<input className="check-input" type="radio" name="user_type" id="student" checked onChange={() => setTipo("student")} />
 								<label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio2">Sou Estudante</label>
 							</div>
 							
 						</div>
-	
-	
-	
-						<Input label="Email"></Input>
-						<Input type="password" label="Senha"></Input>
-						<Input type="password" label="Repetir senha"></Input>
+
+						{/*email*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Email </label>
+							<input type="Email" placeholder= "email@gmail.com" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+						</div>
+						{/*password*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Senha </label>
+							<input type="Password" placeholder= "" value={senha} onChange={(e)=> setSenha(e.target.value)}/>
+						</div>
+						{/*password-confirm*/}
+						<div className="input-field d-flex flex-column">
+							<label className="font-subtitle-16-ubuntu"> Repetir senha </label>
+							<input type="Password" placeholder= "" value={senhaConfirm} onChange={(e)=> setSenhaConfirm(e.target.value)}/>
+						</div>
+						
 						<div className='row m-0 mt-4 mb-3 color_gray'>
 						<button type="button" className="signInSignOut font-button-20-ubuntu" onClick={() => {setStep(state => state + 1)}}>Próximo</button>
 						</div>
