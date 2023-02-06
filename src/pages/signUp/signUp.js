@@ -47,22 +47,23 @@ function SignUp() {
 	const handleCreateUser = () =>{
 
 		let user = {
-			name: nome,
-			email: email,
-			password: senha,
-			imageURL: "null"
+			user_type: "pessoa",
+			name: "MICHEL",
+			email: "AKSJDKAJSKD@gmail.com",
+			password: "1234654",
+			phone_number: "123478949",
+			cpf_cnpj: "1222",
+			imageURL: "1234"
 		}
-
-		fetch('http://localhost:4200/users/signup',{
-				method:"POST",
-				body: JSON.stringify(user),
-				mode: "cors"
+		fetch('http://localhost:4200/users/signup', {
+			method: "POST",
+			body: JSON.stringify(user),
+			headers: {"Content-type": "application/json; charset=UTF-8"}
 			})
-			.then(res => res.json()
-			.then(data => {
-				console.log(data);
-			}))
+			.then(response => response.json()) 
+			.then(json => console.log(json))
 			.catch(err => console.log(err));
+		
 
 	}
 
