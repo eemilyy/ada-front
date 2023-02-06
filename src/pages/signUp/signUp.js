@@ -7,14 +7,12 @@ import './signUp.scss';
 import '../../stylesheets/_colors.scss';
 import '../../stylesheets/_fonts.scss';
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
-import { useState } from 'react';
-import CancelButton from '../../components/buttons/cancelButton/cancelButton';
-
-
-
-
 import SignUpForms from "./signUp-forms/signUp-forms";
 import './signUp-personal-info.scss';
+import { useState } from 'react';
+
+
+
 
 
 function SignUp() {
@@ -44,6 +42,28 @@ function SignUp() {
 			.catch((error) => {
 				console.log(error);
 			})
+	}
+
+	const handleCreateUser = () =>{
+
+		let user = {
+			name: nome,
+			email: email,
+			password: senha,
+			imageURL: "null"
+		}
+
+		fetch('http://localhost:4200/users/signup',{
+				method:"POST",
+				body: JSON.stringify(user),
+				mode: "cors"
+			})
+			.then(res => res.json()
+			.then(data => {
+				console.log(data);
+			}))
+			.catch(err => console.log(err));
+
 	}
 
 	const getCEP = async (e) => {
@@ -245,10 +265,10 @@ function SignUp() {
 
 						</div>
 
-						<div className="d-flex justify-content-end buttons-line">
-							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
-							<button type="button" onClick={() => { setStep(state => state + 1) }}>Próximo</button>
-						</div>
+				<div className="d-flex justify-content-end buttons-line">
+					<button type="button" onClick={() => {setStep(state => state - 1)}}>Anterior</button>
+					<button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button>
+				</div>
 
 					</div>
 				)}
