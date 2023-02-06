@@ -202,7 +202,7 @@ function SignUp() {
 				)}
 				{step === 3 && (
 					<div className="container">
-						<SignUpForms loadingProgress={100}></SignUpForms>
+						<SignUpForms loadingProgress={60}></SignUpForms>
 
 						<div className="input-fields d-flex">
 							<div className="right-address-inputs">
@@ -247,10 +247,22 @@ function SignUp() {
 
 						<div className="d-flex justify-content-end buttons-line">
 							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
-							<button type="button" onClick={() => { }}>Finalizar Cadastro</button>
+							<button type="button" onClick={() => { setStep(state => state + 1) }}>Próximo</button>
 						</div>
 
 					</div>
+				)}
+				{step === 4 && (
+					<>
+						<SignUpForms loadingProgress={100}></SignUpForms>
+
+
+
+						<div className="d-flex justify-content-end buttons-line">
+							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
+							<button type="button" onClick={() => { }}>Finalizar Cadastro</button>
+						</div>
+					</>
 				)}
 			</div>
 		</>
