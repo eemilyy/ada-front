@@ -22,7 +22,7 @@ function SignUp() {
 	const [senha, setSenha] = useState("");
 	const [senhaConfirm, setSenhaConfirm] = useState("");
 	const [nome, setNome] = useState("");
-	const [tipo, setTipo] = useState("");
+	const [tipo, setTipo] = useState("student");
 	const [cpfCnpj, setCpfCnpj] = useState("");
 	const [telefone, setTelefone] = useState("");
 	const [cep, setCep] = useState("");
@@ -44,7 +44,7 @@ function SignUp() {
 			})
 	}
 
-	const handleCreateUser = () =>{
+	const handleCreateUser = () => {
 
 		let user = {
 			user_type: "pessoa",
@@ -58,12 +58,12 @@ function SignUp() {
 		fetch('http://localhost:4200/users/signup', {
 			method: "POST",
 			body: JSON.stringify(user),
-			headers: {"Content-type": "application/json; charset=UTF-8"}
-			})
-			.then(response => response.json()) 
+			headers: { "Content-type": "application/json; charset=UTF-8" }
+		})
+			.then(response => response.json())
 			.then(json => console.log(json))
 			.catch(err => console.log(err));
-		
+
 
 	}
 
@@ -144,7 +144,7 @@ function SignUp() {
 
 									<div>
 
-										<input className="check-input" type="radio" name="user_type" id="student" checked onChange={() => setTipo("student")} />
+										<input className="check-input" type="radio" name="user_type" id="student" onChange={() => setTipo("student")} />
 										<label className="font-subtitle-12-ubuntu mb-0" for="inlineRadio2">Sou Estudante</label>
 									</div>
 
@@ -187,7 +187,7 @@ function SignUp() {
 				)}
 				{step === 2 && (
 					<div className="container">
-						<SignUpForms loadingProgress={60}></SignUpForms>
+						<SignUpForms loadingProgress={40}></SignUpForms>
 
 
 						<div className="input-fields">
@@ -266,10 +266,11 @@ function SignUp() {
 
 						</div>
 
-				<div className="d-flex justify-content-end buttons-line">
-					<button type="button" onClick={() => {setStep(state => state - 1)}}>Anterior</button>
-					<button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button>
-				</div>
+						<div className="d-flex justify-content-end buttons-line">
+							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
+							{/* <button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button> */}
+							<button type="button" onClick={() => { setStep(state => state + 1) }}>PROX</button>
+						</div>
 
 					</div>
 				)}
@@ -277,7 +278,32 @@ function SignUp() {
 					<>
 						<SignUpForms loadingProgress={100}></SignUpForms>
 
-
+						<div className='container'>
+							<div className='row'>
+								<div className='col-3'>
+									<div className='card-plan'>
+										<p className='font-subtitle-24-ubuntu'>Plano Premium</p>
+										{(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$29,90</p> }
+										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$49,90</p> }
+										<p className='d-flex flex-row-reverse'>
+											Por mês
+										</p>
+										<p className='mt-5'>Possibilidade de acesso ilimitado a plataforma</p>
+									</div>
+								</div>
+								<div className='col-3'>
+									<div className='card-plan'>
+										<p className='font-subtitle-24-ubuntu'>Plano Básico</p>
+										{(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$9,90</p> }
+										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$15,90</p> }
+										<p className='d-flex flex-row-reverse'>
+											Por mês
+										</p>
+										<p className='mt-5'>Acesso gratuito a plataforma, com algumas limitações</p>
+									</div>
+								</div>
+							</div>
+						</div>
 
 						<div className="d-flex justify-content-end buttons-line">
 							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>

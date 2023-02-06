@@ -19,11 +19,13 @@ function SignUpForms({ loadingProgress }) {
                         conosco.
                     </p>
 
-                    {loadingProgress === 60 ? <h3 className="font-h3-32-ubuntu form-title"> Informações Pessoais </h3> : <h3 className="font-h3-32-ubuntu form-title"> Escolha seu plano </h3>}
+                    {loadingProgress >= 60 ? <h3 className="font-h3-32-ubuntu form-title"> Informações Pessoais </h3> : <h3 className="font-h3-32-ubuntu form-title"> Escolha seu plano </h3>}
                 </div>
 
                 <div style={{ width: 200, height: 200}} className="mt-5">
-                    {loadingProgress === 60 ? <CircularProgressbar value={66} text={"60"} styles={buildStyles({ pathTransitionDuration: 0.5, })}/> : <CircularProgressbar value={100} text={"100"} styles={buildStyles({  })} />}
+                    {loadingProgress === 60 && <CircularProgressbar value={60} text={"60%"} />}
+                    {loadingProgress === 40 && <CircularProgressbar value={40} text={"40%"} />}
+                    {loadingProgress === 100 && <CircularProgressbar value={100} text={"100%"} />}
                 </div>
             </div>
         </div>
