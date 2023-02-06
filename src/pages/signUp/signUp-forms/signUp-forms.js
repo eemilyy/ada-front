@@ -1,5 +1,5 @@
 import './signUp-forms.scss';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
@@ -23,7 +23,7 @@ function SignUpForms({ loadingProgress }) {
                 </div>
 
                 <div style={{ width: 200, height: 200}} className="mt-5">
-                    {loadingProgress === 60 ? <CircularProgressbar value={66} /> : <CircularProgressbar value={100} />}
+                    {loadingProgress === 60 ? <CircularProgressbar value={66} text={"60"} styles={buildStyles({ pathTransitionDuration: 0.5, })}/> : <CircularProgressbar value={100} text={"100"} styles={buildStyles({  })} />}
                 </div>
             </div>
         </div>

@@ -27,6 +27,7 @@ import ProjectsFormNavbar from './pages/projects-form/components/projects-form-n
 
 import Profile from './pages/profile/profile';
 import CreateProject from './pages/projects-form/components/form-card/form-card';
+import Project from './pages/project/project';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <Route path="/test" element={<ProjectsFormNavbar/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/project/new" element={<CreateProject/>}/>
+          <Route path='/project' element={<Project/>}/>
 
 
           {/*Exemplos de uso dos botoes*/}
