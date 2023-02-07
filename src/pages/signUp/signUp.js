@@ -1,5 +1,5 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
-import { Link } from 'react-router-dom';
+import { Link, Navigate} from 'react-router-dom';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../services/firebase"
 import pyre from '../../assets/images/pyre.svg';
@@ -9,13 +9,14 @@ import '../../stylesheets/_fonts.scss';
 import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/ContinueGoogleButton"
 import SignUpForms from "./signUp-forms/signUp-forms";
 import './signUp-personal-info.scss';
-import { useState } from 'react';
+import { useState} from 'react';
 
 
 
 
 
 function SignUp() {
+	const [userCreated,setUserCreated] = useState(false);
 	const [step, setStep] = useState(0);
 
 	const [email, setEmail] = useState("");
@@ -32,7 +33,6 @@ function SignUp() {
 	const [rua, setRua] = useState("");
 	const [numero, setNumero] = useState("");
 
-
 	const handleGoogleSingIn = () => {
 		const provider = new GoogleAuthProvider();
 		signInWithPopup(auth, provider)
@@ -45,15 +45,15 @@ function SignUp() {
 	}
 
 	const handleCreateUser = () => {
-
+		console.log("crinado user");
 		let user = {
-			user_type: "pessoa",
-			name: "MICHEL",
-			email: "AKSJDKAJSKD@gmail.com",
-			password: "1234654",
-			phone_number: "123478949",
-			cpf_cnpj: "1222",
-			imageURL: "1234"
+			user_type: tipo,
+			name: nome,
+			email: email,
+			password: senha,
+			phone_number: telefone,
+			cpf_cnpj: cpfCnpj,
+			imageURL: ""
 		}
 		fetch('http://localhost:4200/users/signup', {
 			method: "POST",
@@ -61,12 +61,17 @@ function SignUp() {
 			headers: { "Content-type": "application/json; charset=UTF-8" }
 		})
 			.then(response => response.json())
-			.then(json => console.log(json))
+			.then(json => console.log(json),setUserCreated(true))
 			.catch(err => console.log(err));
 
+		if(userCreated){
+			console.log("usuário criado");
+		}
+		else{
+			console.log("erro ao criar usuario");
+		}
 
 	}
-
 	const getCEP = async (e) => {
 
 		const cep = e.target.value.replace(/\D/g, '');
@@ -94,9 +99,11 @@ function SignUp() {
 			//document.getElementById("numero")
 		)
 
-
 	}
 
+    if(userCreated){
+        return <Navigate to="/projects" replace={true} />
+    }
 
 
 	return (
@@ -313,8 +320,9 @@ function SignUp() {
 
 						<div className="d-flex justify-content-end buttons-line">
 							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
-							<button type="button" onClick={() => { }}>Finalizar Cadastro</button>
+							<button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button>
 						</div>
+
 					</>
 				)}
 			</div>
