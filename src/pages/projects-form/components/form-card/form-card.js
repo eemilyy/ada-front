@@ -35,19 +35,27 @@ function CreateProject() {
 
                     <div className='mx-auto mt-5 d-flex justify-content-center project-container'>
                         <div>
-                            <label className="mb-0 font-subtitle-16-ubuntu opacity_text" >Nome do projeto</label>
-                            <Input placeholder="Nome" />
 
-
-                            <label className="mb-0 font-subtitle-16-ubuntu opacity_text" >Descrição</label>
-                            <Input placeholder="Forneca uma breve descrição" />
-
-                            <label className="mb-0 font-subtitle-16-ubuntu opacity_text" >Valor</label>
-                            <Input placeholder="0,00" />
+                            <div className=" d-flex flex-column">
+                                <label className="font-subtitle-16-ubuntu"> Titulo do Projeto </label>
+                                <input placeholder="Desenvolvimento Web" />
+                            </div>
+                            <div className=" d-flex flex-column">
+                                <label className="font-subtitle-16-ubuntu"> Descrição do Projeto </label>
+                                <input placeholder="Breve descrição do projeto" />
+                            </div>
+                            <div className=" d-flex flex-column">
+                                <label className="font-subtitle-16-ubuntu"> Preço do Projeto </label>
+                                <input placeholder="0,00" />
+                            </div>
+                            <div className=" d-flex flex-column">
+                                <label className="font-subtitle-16-ubuntu"> Contato </label>
+                                <input placeholder="DDD e sem caracteres especiais" />
+                            </div>
 
                             <div className='row mt-4'>
                                 <div className='col'>
-                                <CancelButton >Cancelar</CancelButton>
+                                    <CancelButton >Cancelar</CancelButton>
 
                                 </div>
 
@@ -56,13 +64,13 @@ function CreateProject() {
                                 <button type='button' className='font-subtitle-16-ubuntu' onClick={handleCreateProject}>Criar</button>
                                 </div>
                             </div>
-                            
-                            
+
+
                         </div>
-                        
-                        
+
+
                     </div>
-            
+
 
 
                 </div>

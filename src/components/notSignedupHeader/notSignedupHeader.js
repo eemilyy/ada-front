@@ -11,9 +11,9 @@ function NotSignedupHeader() {
         <div className="d-flex justify-content-between landing-header">
             <div className="d-flex align-items-center group-header">
                 <img src={pyre} height={55} alt="logo" />
-                <div className="font-button-20-ubuntu link"> Explorar </div>
-                <div className="font-button-20-ubuntu link"> Criar projeto </div>
-                <div className="font-button-20-ubuntu link"> Sobre nós </div>
+                <div className="font-button-20-ubuntu link"> <a href='/' className=' text-blue'>Explorar</a></div>
+                {/* <div className="font-button-20-ubuntu link"> Criar projeto </div>
+                <div className="font-button-20-ubuntu link"> Sobre nós </div> */}
             </div>
 
             <div className="d-flex align-items-center group-header">
