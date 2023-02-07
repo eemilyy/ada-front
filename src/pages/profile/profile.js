@@ -2,6 +2,7 @@ import './profile.scss';
 import '../../stylesheets/_fonts.scss'
 import HeaderSignUp from '../../components/header/header'
 import BackButton from '../../components/buttons/backButton/BackButton';
+import icone from '../../assets/images/icon.svg';
 
 
 function Profile() {
@@ -17,7 +18,7 @@ function Profile() {
                                     <div className="col-sm-4 bg-blue user-profile">
                                         <div className="card-block text-center text-white">
                                             <div className="m-b-25">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/709/709722.png" className="img-radius" alt="User-Profile-Image" height='100px' />
+                                                <img src={icone} className="img-radius" alt="User-Profile-Image" height='100px' />
                                             </div>
                                             <h6 className="f-w-600 font-18-ubuntu">User NAME</h6>
                                         </div>
@@ -67,7 +68,7 @@ function Profile() {
                                                 </div>
                                             </div>
                                             <div className='mt-5 d-flex flex-row-reverse'>
-                                                <BackButton></BackButton>
+                                                <BackButton>Logout</BackButton>
 
                                             </div>
                                         </div>

@@ -23,7 +23,6 @@ import SignUpAddressInfo from './pages/signUp/signUp-address-info';
 import Logout from './pages/logoutTest/logout';
 import RecoverPasswordIntro from './pages/recoverPassword/recoverPasswordIntro/recoverPasswordIntro';
 import RecoverPassword from './pages/recoverPassword/recoverPassword/recoverPassword';
-import ProjectsFormNavbar from './pages/projects-form/components/projects-form-navbar/projects-form-navbar';
 
 import Profile from './pages/profile/profile';
 import CreateProject from './pages/projects-form/components/form-card/form-card';
@@ -54,7 +53,6 @@ function App() {
           <Route path="/signup/address-information" element={<SignUpAddressInfo/>}/>
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
-          <Route path="/test" element={<ProjectsFormNavbar/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/projects/new" element={<CreateProject/>}/>
           <Route path='/projects' element={<Project/>}/>

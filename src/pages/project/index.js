@@ -3,6 +3,12 @@ import Header from '../../components/header/header';
 import './project.scss'
 
 function IndexProject() {
+
+    const handleWhatsapp = (number) => {
+        console.log("ENTROU");
+        window.open(`https://wa.me/55${number}?text=Tenho%20interesse%20em%20participar%20do%20seu%20projeto`, '_blank')
+    }
+    var number = 11999275958;
     return (
         <>
             <Header></Header>
@@ -30,7 +36,7 @@ function IndexProject() {
                             <p className='font-subtitle-24-ubuntu text-center'>
                                 Gostou do projeto?
                             </p>
-                           <button type="button" className='btn font-subtitle-16-ubuntu'>Conversar com o proprietário</button>
+                           <button type="button" className='btn font-subtitle-16-ubuntu' onClick={()=>(handleWhatsapp(number))}>Conversar com o proprietário</button>
                         </div>
                         <div className='card-project'>
                             <img src='https://static.portugues.com.br/2022/04/1-anuncio-publicitario.jpg' alt='Anuncio' className='image'></img>

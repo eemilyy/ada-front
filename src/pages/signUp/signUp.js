@@ -269,7 +269,7 @@ function SignUp() {
 						<div className="d-flex justify-content-end buttons-line">
 							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
 							{/* <button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button> */}
-							<button type="button" onClick={() => { setStep(state => state + 1) }}>PROX</button>
+							<button type="button" onClick={() => { setStep(state => state + 1) }}>Próximo</button>
 						</div>
 
 					</div>
@@ -282,7 +282,10 @@ function SignUp() {
 							<div className='row'>
 								<div className='col-3'>
 									<div className='card-plan'>
-										<p className='font-subtitle-24-ubuntu'>Plano Premium</p>
+									<div className='justify-content-center'>
+										<input className="check-input" type="radio" name="plans" id="premium_plan" />
+										<label className="font-subtitle-24-ubuntu mb-0" for="inlineRadio1">Plano Premium</label>
+									</div>
 										{(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$29,90</p> }
 										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$49,90</p> }
 										<p className='d-flex flex-row-reverse'>
@@ -293,7 +296,10 @@ function SignUp() {
 								</div>
 								<div className='col-3'>
 									<div className='card-plan'>
-										<p className='font-subtitle-24-ubuntu'>Plano Básico</p>
+									<div className='justify-content-center'>
+										<input className="check-input" type="radio" name="plans" id="basic_plan" />
+										<label className="font-subtitle-24-ubuntu mb-0" for="inlineRadio1">Plano Básico</label>
+									</div>
 										{(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$9,90</p> }
 										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$15,90</p> }
 										<p className='d-flex flex-row-reverse'>
