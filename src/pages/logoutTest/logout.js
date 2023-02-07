@@ -4,6 +4,9 @@ import {auth} from "../../services/firebase"
 const Logout = () =>{
     const handleLogOut = () =>{
         signOut(auth);
+
+        localStorage.clear();
+
         console.log("saindo...");
         window.location.href = "/login"
     }

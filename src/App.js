@@ -31,22 +31,32 @@ import IndexProject from './pages/project';
 
 
 function App() {
-  const [user, setUser] = useState(undefined);
+   const [currentUser, setCurrentUser] = useState(undefined);
 
-  useEffect(()=>{
-    onAuthStateChanged(auth, (user) =>{
-      user && console.log("logado como: " + user.displayName);
-      setUser(user);
-    })
+   useEffect(()=>{
+     
+     const userToken = localStorage.getItem("user_token");
+     const currentUser = localStorage.getItem("user");
+     
+     if (!!userToken && !!currentUser) {
+      const hasUser = JSON.parse(currentUser);
+      setCurrentUser(hasUser);
 
-  })
+      //setCurrentToken(userToken);
+      }
+      //google
+      //  onAuthStateChanged(auth, (user) =>{
+      //    user && console.log("logado como: " + user.displayName);
+      //    setCurrentUser(user);
+      //  })
+   },[])
 
   return (
-    <AuthProvider value={user}>
+    <AuthProvider value={currentUser}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage/>}/>
-          <Route path="/login" element={ !user ? <Login/> : <Navigate to={"/logout"}/>}/>
+          <Route path="/login" element={ !currentUser ? <Login/> : <Navigate to={"/logout"}/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
           <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
@@ -54,7 +64,7 @@ function App() {
           <Route path="/recoverPasswordIntro" element={<RecoverPasswordIntro/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
           <Route path="/profile" element={<Profile/>}/>
-          <Route path="/projects/new" element={<CreateProject/>}/>
+          <Route path="/projects/new" element={<CreateProject currentUser/>}/>
           <Route path='/projects' element={<Project/>}/>
           <Route path='/projects/show' element={<IndexProject/>}/>
 

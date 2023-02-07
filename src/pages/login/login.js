@@ -1,6 +1,6 @@
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import {auth} from "../../services/firebase"
 
@@ -15,7 +15,9 @@ import Input from "../../components/input/input";
 function Login() {
 		const ref = useRef(null);
 		const ref2 = useRef(null);
-
+		const [email,setEmail] =useState('');
+		const [senha,setSenha] =useState('');
+		
 		const handleGoogleSingIn = () =>{
 			const provider = new GoogleAuthProvider();
 
@@ -27,6 +29,22 @@ function Login() {
 				console.log(error);
 			})
 
+		}
+
+		const handleSignIn = (e) => {
+
+			console.log("logando..")
+			const user = {
+				nome: "michel"
+			}
+
+			localStorage.setItem("user_token", "uasdfnausdnufsudf");
+			localStorage.setItem("user",JSON.stringify(user));
+
+			console.log(localStorage.getItem("user_token"));
+			console.log(localStorage.getItem("user"));
+			
+			window.location.reload(false);
 		}
 
 		return (
@@ -47,8 +65,11 @@ function Login() {
 							}} onBlur={ () => {
 								ref.current.style.opacity = 0.8;
 							}}>
-							<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref} >Email</label>
-							<Input placeholder="name@email.com" />
+							{/*email*/}
+							<div className="input-field d-flex flex-column">
+								<label className="font-subtitle-16-ubuntu"> Email </label>
+								<input type="Email" placeholder="email@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+							</div>
 						</div>
 						<div className="mt-1 color_gray" onFocus={ () => {
 								ref2.current.style.opacity = 1;
@@ -56,15 +77,16 @@ function Login() {
 							}} onBlur={ () => {
 								ref2.current.style.opacity = 0.8;
 							}}>
-							<div className="d-flex color_gray">
-								<label className="mb-0 font-subtitle-16-ubuntu color_gray opacity_text" ref={ref2}>Senha</label>
-								<Link to="/recoverPasswordIntro" className="ms-auto font-subtitle-12-ubuntu forgot_password ">Esqueceu sua senha?</Link>
+
+							{/*password*/}
+							<div className="input-field d-flex flex-column">
+								<label className="font-subtitle-16-ubuntu"> Senha </label>
+								<input type="Password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
 							</div>
-							<Input type="password"/>
 						</div>
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray'>
-						<SignInSignOutButton>Entrar</SignInSignOutButton>
+						<button className="signInSignOut font-button-20-ubuntu" onClick={handleSignIn}>Entrar</button>
 					</div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
