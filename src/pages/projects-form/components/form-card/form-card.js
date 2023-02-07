@@ -3,8 +3,28 @@ import Input from "../../../../components/input/input";
 import './form-card.scss'
 import NavBar from '../../../../components/header/header'
 import CancelButton from '../../../../components/buttons/cancelButton/cancelButton';
+import { useState } from 'react';
 
 function CreateProject() {
+    const [projectCreated, setProjectCreated] = useState(false);
+
+    const handleCreateProject = () =>{
+        let project = {
+            user_id: "75e30048-54e5-4c3d-8dc6-15246cc3673e",
+            name: "a",
+            description: "a",
+            phone_number: "a",
+        }
+        fetch('http://localhost:4200/projects/new', {
+			method: "POST",
+			body: JSON.stringify(project),
+			headers: { "Content-type": "application/json; charset=UTF-8" }
+		})
+			.then(response => response.json())
+			.then(json => console.log(json),setProjectCreated(true))
+			.catch(err => console.log(err));
+    }
+    
     return (
         <>
             <NavBar></NavBar>
@@ -33,7 +53,7 @@ function CreateProject() {
 
                                 <div className='col'>
 
-                                <button type='button' className='font-subtitle-16-ubuntu'>Criar</button>
+                                <button type='button' className='font-subtitle-16-ubuntu' onClick={handleCreateProject}>Criar</button>
                                 </div>
                             </div>
                             
