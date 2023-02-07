@@ -6,6 +6,14 @@ import icone from '../../assets/images/icon.svg';
 
 
 function Profile() {
+    const handleLogOut = () => {
+		
+        localStorage.clear();
+        
+		console.log("saindo...");
+		window.location.href = "/"
+	}
+
     return (
         <>
             <HeaderSignUp></HeaderSignUp>
@@ -74,7 +82,8 @@ function Profile() {
                                                 </div>
                                             </div>
                                             <div className='mt-5 d-flex flex-row-reverse'>
-                                                <BackButton>Logout</BackButton>
+
+                                                <button type="button" className="" onClick={handleLogOut}>Sair</button>
 
                                             </div>
                                         </div>

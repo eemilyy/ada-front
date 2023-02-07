@@ -10,8 +10,10 @@ function Header() {
 	const navigate = useNavigate();
 	const auth = getAuth();
 	const user = auth.currentUser;
+
 	const handleLogOut = () => {
 		signOut(auth);
+		
 		console.log("saindo...");
 		window.location.href = "/"
 	}

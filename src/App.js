@@ -37,26 +37,29 @@ function App() {
      
      const userToken = localStorage.getItem("user_token");
      const currentUser = localStorage.getItem("user");
-     
+     console.log(currentUser);
      if (!!userToken && !!currentUser) {
-      const hasUser = JSON.parse(currentUser);
+      const hasUser = currentUser;
       setCurrentUser(hasUser);
 
       //setCurrentToken(userToken);
+      }
+      else{
+        setCurrentUser(null);
       }
       //google
       //  onAuthStateChanged(auth, (user) =>{
       //    user && console.log("logado como: " + user.displayName);
       //    setCurrentUser(user);
       //  })
-   },[])
+   })
 
   return (
     <AuthProvider value={currentUser}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage/>}/>
-          <Route path="/login" element={ !currentUser ? <Login/> : <Navigate to={"/logout"}/>}/>
+          <Route path="/login" element={ !currentUser ? <Login/> : <Navigate to={"/projects"}/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/signup/intro" element={<SignUpEmailIntroduction/>}/>
           <Route path="/signup/personal-information" element={<SignUpPersonalInfo/>}/>
