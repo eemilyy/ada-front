@@ -18,16 +18,16 @@ function IndexProject() {
                     <div className='col-8'>
                         <div className='card-project'>
                             <div className='font-h1-64-ubuntu'>
-                                <h1 className='text-blue'>NOME DO PROJETO</h1>
+                                <h1 className='text-blue'>Desenvolvimento de API Rest</h1>
                             </div>
                             <hr></hr>
                             <div>
-                                <h1 className='font-h3-32-ubuntu'>Titulo</h1>
-                                <p>Descrição</p> {/*DEIXAR INTERATIVO*/}
-                                <p>Empresa</p>
+                                <p>Criação e desenvolvimento de uma API Rest para uma aplicação de empresa de tecnologia</p> {/*DEIXAR INTERATIVO*/}
+                                <p>Valor por projeto: R$ 1200,00</p>
                             </div>
                             <hr></hr>
                             <p className='font-h3-32-ubuntu'>Dados da empresa</p>
+                            <p>Solucções Tecno</p>
                         </div>
 
                     </div>

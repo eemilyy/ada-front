@@ -16,18 +16,12 @@ function Project() {
                             </div>
                             <hr></hr>
                             <div>
-                                <h1 className='font-h3-32-ubuntu'>Titulo</h1>
-                                <p>Descrição</p> {/*DEIXAR INTERATIVO*/}
-                                <p>Empresa</p>
+                                <h1 className='font-h3-32-ubuntu'>Desenvolvimento de uma API Rest</h1>
+                                <p>Criação e desenvolvimento de uma API Rest para uma aplicação de empresa de tecnologia</p> {/*DEIXAR INTERATIVO*/}
+                                <p>Solucções Tecno</p>
                             </div>
-                            <button type='button'>Saiba mais</button>
+                            <button type='button'><a href='/projects/show'>Saiba mais</a></button>
                             <hr></hr>
-                            <div>
-                                <h1 className='font-h3-32-ubuntu'>Titulo</h1>
-                                <p>Descrição</p> {/*DEIXAR INTERATIVO*/}
-                                <p>Empresa</p>
-                            </div>
-                            <button type='button'>Saiba mais</button>
                         </div>
 
                     </div>

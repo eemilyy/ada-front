@@ -55,7 +55,7 @@ function CreateProject() {
 
                             <div className='row mt-4'>
                                 <div className='col'>
-                                    <CancelButton >Cancelar</CancelButton>
+                                    <CancelButton ><a href='/projects'>Cancelar</a></CancelButton>
 
                                 </div>
 

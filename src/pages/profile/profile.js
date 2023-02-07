@@ -20,7 +20,7 @@ function Profile() {
                                             <div className="m-b-25">
                                                 <img src={icone} className="img-radius" alt="User-Profile-Image" height='100px' />
                                             </div>
-                                            <h6 className="f-w-600 font-18-ubuntu">User NAME</h6>
+                                            <h6 className="f-w-600 font-18-ubuntu">Nome</h6>
 
                                             
                                         </div>
@@ -35,42 +35,42 @@ function Profile() {
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
-                                                    <h6 className="text-muted f-w-400">rntng@gmail.com</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">CPF/CNPJ</p>
-                                                    <h6 className="text-muted f-w-400">98979989898</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 mt-3 f-w-600">Telefone</p>
-                                                    <h6 className="text-muted f-w-400">98979989898</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                             </div>
                                             <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 font-subtitle-24-ubuntu">Endereço</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Rua</p>
-                                                    <h6 className="text-muted f-w-400">Sam Disuja</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Número</p>
-                                                    <h6 className="text-muted f-w-400">Sam Disuja</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 mt-3 f-w-600">Bairro</p>
-                                                    <h6 className="text-muted f-w-400">Dinoter husainm</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 mt-3 f-w-600">Cidade</p>
-                                                    <h6 className="text-muted f-w-400">Dinoter husainm</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 mt-3 f-w-600">Estado</p>
-                                                    <h6 className="text-muted f-w-400">Dinoter husainm</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 mt-3 f-w-600">CEP</p>
-                                                    <h6 className="text-muted f-w-400">Dinoter husainm</h6>
+                                                    <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                             </div>
                                             <div className='mt-5 d-flex flex-row-reverse'>
