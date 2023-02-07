@@ -45,7 +45,7 @@ function SignUp() {
 	}
 
 	const handleCreateUser = () => {
-		console.log("crinado user");
+		console.log("criando user");
 		let user = {
 			user_type: tipo,
 			name: nome,

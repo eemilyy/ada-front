@@ -15,8 +15,12 @@ import Input from "../../components/input/input";
 function Login() {
 		const ref = useRef(null);
 		const ref2 = useRef(null);
-		const [email,setEmail] =useState('');
-		const [senha,setSenha] =useState('');
+		const [senha,setSenha] = useState("");
+		const [email,setEmail] = useState("");
+		const [isLogged, setIsLogged] = useState(false)
+		const [userID, setUserID] = useState("");
+		const [userToken, setUserToken] = useState("");
+
 		
 		const handleGoogleSingIn = () =>{
 			const provider = new GoogleAuthProvider();
@@ -31,20 +35,71 @@ function Login() {
 
 		}
 
-		const handleSignIn = (e) => {
 
-			console.log("logando..")
-			const user = {
-				nome: "michel"
+		const handleSignIn = (e) => {
+			console.log("logando...");
+
+			// let user = {
+			// 	user_type: tipo,
+			// 	name: nome,
+			// 	email: email,
+			// 	password: senha,
+			// 	phone_number: telefone,
+			// 	cpf_cnpj: cpfCnpj,
+			// 	imageURL: ""
+			// }
+
+			let credencials = {
+				email: email,
+				password: senha
 			}
 
-			localStorage.setItem("user_token", "uasdfnausdnufsudf");
-			localStorage.setItem("user",JSON.stringify(user));
+//-----------------------------------------------------------
+			const url = "http://localhost:4200/users/login";
+			const options = {
+				method: "POST",
+				mode: "cors",
+				body: JSON.stringify(credencials),
+				headers: {
+					'content-type': 'application/json;charset=utf-8',
+				}
+			}
 
-			console.log(localStorage.getItem("user_token"));
-			console.log(localStorage.getItem("user"));
+			fetch(url, options).then(
+				response => response.json()
+			).then(
+				data => {
+					console.log(data);
+					//console.log(data.id)
+					//console.log(data.token)
+					setUserID(data.id);
+					setUserToken(data.token);
+				    localStorage.setItem("user_token",userToken);
+					localStorage.setItem("user",userID);
+					console.log("usuario logado com sucesso")
+					window.location.href = "/projects"
+				},
+			)
+			.catch(err => console.log(err));
+//-----------------------------------------------------------
+	
+			if(isLogged){
+				console.log("logado com sucesso");
+				console.log(userID)
+			}
+			else{
+				console.log("Usuário ou senha inválida");
+			}
+
+
+
+			// localStorage.setItem("user_token", "uasdfnausdnufsudf");
+			// localStorage.setItem("user",JSON.stringify(user));
+
+			// console.log(localStorage.getItem("user_token"));
+			// console.log(localStorage.getItem("user"));
 			
-			window.location.reload(false);
+			//window.location.reload(false);
 		}
 
 		return (
@@ -59,24 +114,14 @@ function Login() {
 
 				<div className='container p-5 main_login color_gray'>
 					<div className='row color_gray'>
-						<div className="color_gray" onFocus={ () => {
-								ref.current.style.opacity = 1;
-								
-							}} onBlur={ () => {
-								ref.current.style.opacity = 0.8;
-							}}>
+						<div className="color_gray" >
 							{/*email*/}
 							<div className="input-field d-flex flex-column">
 								<label className="font-subtitle-16-ubuntu"> Email </label>
 								<input type="Email" placeholder="email@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
 							</div>
 						</div>
-						<div className="mt-1 color_gray" onFocus={ () => {
-								ref2.current.style.opacity = 1;
-								
-							}} onBlur={ () => {
-								ref2.current.style.opacity = 0.8;
-							}}>
+						<div className="mt-1 color_gray">
 
 							{/*password*/}
 							<div className="input-field d-flex flex-column">
