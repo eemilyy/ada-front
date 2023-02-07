@@ -16,11 +16,17 @@ function Profile() {
                             <div className="card user-card-full">
                                 <div className="row m-l-0 m-r-0">
                                     <div className="col-sm-4 bg-blue user-profile">
-                                        <div className="card-block text-center text-white">
+                                        <div className="card-block text-center text-white align-items-end">
                                             <div className="m-b-25">
                                                 <img src={icone} className="img-radius" alt="User-Profile-Image" height='100px' />
                                             </div>
                                             <h6 className="f-w-600 font-18-ubuntu">User NAME</h6>
+
+                                            
+                                        </div>
+                                        <div className="card-block text-center text-white m-t-10">
+                                            
+                                            <a href='/' className=''>Apagar conta</a>
                                         </div>
                                     </div>
                                     <div className="col-sm-8">
