@@ -34,7 +34,7 @@ function Profile() {
                                         </div>
                                         <div className="card-block text-center text-white m-t-10">
                                             
-                                            <a href='/' className=''>Apagar conta</a>
+                                            <a href='/' className='a-alter'>Apagar conta</a>
                                         </div>
                                     </div>
                                     <div className="col-sm-8">
@@ -54,7 +54,7 @@ function Profile() {
                                                     <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
                                             </div>
-                                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 font-subtitle-24-ubuntu">Endereço</h6>
+                                            {/* <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 font-subtitle-24-ubuntu">Endereço</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Rua</p>
@@ -80,7 +80,7 @@ function Profile() {
                                                     <p className="m-b-10 mt-3 f-w-600">CEP</p>
                                                     <h6 className="text-muted f-w-400">-</h6>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className='mt-5 d-flex flex-row-reverse'>
 
                                                 <button type="button" className="" onClick={handleLogOut}>Sair</button>

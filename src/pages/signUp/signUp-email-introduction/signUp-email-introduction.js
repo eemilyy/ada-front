@@ -13,7 +13,7 @@ function SignUpEmailIntroduction() {
             <p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
             <div className='mx-auto'>
-                <div className='container p-5 main_signup color_gray'>
+                <div className='container p-5 main_signup'>
                     
                     <div className='d-flex justify-content-between mb-3'>
 

@@ -17,11 +17,21 @@
     width: 100%;
 }
 
-.btn, .btn:hover{
+.btn{
     background-color: $color-warning-pink-01;
     margin: auto;
     width: auto;
     margin-top: 45px;
     display: flex;
     justify-content: center
+}
+
+.btn-sm, .btn-sm:hover {
+    background-color: $color-warning-pink-01;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+a, a:hover{
+    color: $color-light-blue-01;
 }

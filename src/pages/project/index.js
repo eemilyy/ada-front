@@ -22,12 +22,12 @@ function IndexProject() {
                             </div>
                             <hr></hr>
                             <div>
-                                <p>Criação e desenvolvimento de uma API Rest para uma aplicação de empresa de tecnologia</p> {/*DEIXAR INTERATIVO*/}
-                                <p>Valor por projeto: R$ 1200,00</p>
+                                <p className='font-18-ubuntu'>Criação e desenvolvimento de uma API Rest para uma aplicação de empresa de tecnologia</p> {/*DEIXAR INTERATIVO*/}
+                                <p className='font-18-ubuntu'>Valor por projeto: R$ 1200,00</p>
                             </div>
                             <hr></hr>
                             <p className='font-h3-32-ubuntu'>Dados da empresa</p>
-                            <p>Solucções Tecno</p>
+                            <p className='font-18-ubuntu'>Solucções Tecno</p>
                         </div>
 
                     </div>

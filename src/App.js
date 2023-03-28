@@ -28,6 +28,7 @@ import Profile from './pages/profile/profile';
 import CreateProject from './pages/projects-form/components/form-card/form-card';
 import Project from './pages/project/project';
 import IndexProject from './pages/project';
+import About from './pages/about/about';
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           <Route path="/projects/new" element={<CreateProject currentUser/>}/>
           <Route path='/projects' element={<Project/>}/>
           <Route path='/projects/show' element={<IndexProject/>}/>
+          <Route path='/sobre' element={<About/>}/>
 
 
           {/*Exemplos de uso dos botoes*/}

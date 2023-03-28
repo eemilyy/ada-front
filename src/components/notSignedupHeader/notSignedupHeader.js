@@ -12,6 +12,8 @@ function NotSignedupHeader() {
             <div className="d-flex align-items-center group-header">
                 <img src={pyre} height={55} alt="logo" />
                 <div className="font-button-20-ubuntu link"> <a href='/' className=' text-blue'>Explorar</a></div>
+                <div className="font-button-20-ubuntu link"> <a href='/sobre' className=' text-blue'>Sobre</a></div>
+
                 {/* <div className="font-button-20-ubuntu link"> Criar projeto </div>
                 <div className="font-button-20-ubuntu link"> Sobre nós </div> */}
             </div>

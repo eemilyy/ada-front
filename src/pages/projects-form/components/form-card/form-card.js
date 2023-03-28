@@ -31,21 +31,21 @@ function CreateProject() {
             <div className='container col-3 mt-5'>
                 <div className=''>
 
-                    <p className='text-center font-h2-56-ubuntu mb-5'>Novo Projeto</p>
+                    <p className='text-center font-h2-56-ubuntu mb-5'>Novo Serviço</p>
 
                     <div className='mx-auto mt-5 d-flex justify-content-center project-container'>
                         <div>
 
                             <div className=" d-flex flex-column">
-                                <label className="font-subtitle-16-ubuntu"> Titulo do Projeto </label>
+                                <label className="font-subtitle-16-ubuntu"> Titulo do Serviço </label>
                                 <input placeholder="Desenvolvimento Web" />
                             </div>
                             <div className=" d-flex flex-column">
-                                <label className="font-subtitle-16-ubuntu"> Descrição do Projeto </label>
+                                <label className="font-subtitle-16-ubuntu"> Descrição do Serviço </label>
                                 <input placeholder="Breve descrição do projeto" />
                             </div>
                             <div className=" d-flex flex-column">
-                                <label className="font-subtitle-16-ubuntu"> Preço do Projeto </label>
+                                <label className="font-subtitle-16-ubuntu"> Preço do Serviço </label>
                                 <input placeholder="0,00" />
                             </div>
                             <div className=" d-flex flex-column">

@@ -118,10 +118,10 @@ function SignUp() {
 						<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
 						<div className='mx-auto'>
-							<div className='container p-5 main_signup color_gray'>
-								<div className="mb-4 color_gray"><ContinueGoogleButton signIn={handleGoogleSingIn} /></div>
-								<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
-								<div className='m-0 mt-4 mb-3 color_gray'>
+							<div className='container p-5 main_signup'>
+								<div className="mb-4 "><ContinueGoogleButton signIn={handleGoogleSingIn} /></div>
+								<div className='ouline font-subtitle-16-ubuntu '>ou</div>
+								<div className='m-0 mt-4 mb-3 '>
 									<button type="button" className="signInSignOut font-button-20-ubuntu" onClick={() => { setStep(state => state + 1) }}>Cadastrar com email</button>
 								</div>
 							</div>
@@ -140,7 +140,7 @@ function SignUp() {
 						<p className='d-flex justify-content-center font-h2-40-ubuntu login_text mt-5 mb-5'>Cadastro</p>
 
 						<div className='mx-auto'>
-							<div className='container p-5 main_signup color_gray'>
+							<div className='container p-5 main_signup'>
 
 								<div className='d-flex justify-content-between mb-3'>
 
@@ -222,7 +222,7 @@ function SignUp() {
 								<button onClick={() => { setStep(state => state - 1) }}>Anterior</button>
 							</div>
 							<div className='ml-4'>
-								<button type="button" onClick={() => { setStep(state => state + 1) }}>Próximo</button>
+								<button type="button" onClick={() => { setStep(state => state + 2) }}>Próximo</button>
 
 							</div>
 						</div>
@@ -307,19 +307,18 @@ function SignUp() {
 										<input className="check-input" type="radio" name="plans" id="basic_plan" />
 										<label className="font-subtitle-24-ubuntu mb-0" for="inlineRadio1">Plano Básico</label>
 									</div>
-										{(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$9,90</p> }
-										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$15,90</p> }
-										<p className='d-flex flex-row-reverse'>
-											Por mês
-										</p>
-										<p className='mt-5'>Acesso gratuito a plataforma, com algumas limitações</p>
+									<p className='font-h3-32-ubuntu mt-5 text-center text-blue'>Grátis*</p>
+										{/* {(tipo === "student") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$9,90</p> }
+										{(tipo === "employer") && <p className='font-h3-32-ubuntu mt-5 text-center text-blue'>R$15,90</p> } */}
+										<p className='mt-5'>Acesso gratuito a plataforma, com algumas limitações.</p>
+										<p>* Algumas taxas podem ser cobradas</p>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div className="d-flex justify-content-end buttons-line">
-							<button type="button" onClick={() => { setStep(state => state - 1) }}>Anterior</button>
+							<button type="button" onClick={() => { setStep(state => state - 2) }}>Anterior</button>
 							<button type="button" onClick={handleCreateUser}>Finalizar Cadastro</button>
 						</div>
 
