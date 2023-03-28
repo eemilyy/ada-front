@@ -16,12 +16,13 @@ function Project() {
                             </div>
                             <hr></hr>
                             <div>
-                                <h1 className='font-h3-32-ubuntu'>Desenvolvimento de uma API Rest</h1>
-                                <p className='font-18-ubuntu'>Criação e desenvolvimento de uma API Rest para uma aplicação de empresa de tecnologia</p> {/*DEIXAR INTERATIVO*/}
-                                <p className='font-18-ubuntu mb-4'>Solucções Tecno</p>
+                                <h1 className='font-h3-32-ubuntu'>Desenvolvolvedor Front-end</h1>
+                                <p className='font-18-ubuntu'>Será responsável por desenvolver e implementar soluções utilizando React.js</p> {/*DEIXAR INTERATIVO*/}
+                                <p className='font-18-ubuntu mb-4'>WoW ERP</p>
                             </div>
                             <a href='/projects/show' className='btn-sm'>Saiba mais</a>
                             <hr></hr>
+
                         </div>
 
                     </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import {auth} from "../../services/firebase"
+import { useNavigate } from 'react-router-dom';
 
 import pyre from '../../assets/images/pyre.svg';
 import './login.scss';
@@ -13,6 +14,7 @@ import ContinueGoogleButton from "../../components/buttons/continueGoogleButton/
 import Input from "../../components/input/input";
 
 function Login() {
+		const navigate = useNavigate();
 		const ref = useRef(null);
 		const ref2 = useRef(null);
 		const [senha,setSenha] = useState("");
@@ -131,7 +133,7 @@ function Login() {
 						</div>
 					</div>
 					<div className='row m-0 mt-4 mb-3 color_gray'>
-						<button className="signInSignOut font-button-20-ubuntu" onClick={handleSignIn}>Entrar</button>
+						<button className="signInSignOut font-button-20-ubuntu" onClick={() => navigate('/projects')}>Entrar</button>
 					</div>
 					<div className='ouline font-subtitle-16-ubuntu color_gray'>ou</div>
 					<div className="mb-4 mt-3 color_gray"><ContinueGoogleButton signIn = {handleGoogleSingIn}/></div>
