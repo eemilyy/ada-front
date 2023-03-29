@@ -19,7 +19,7 @@ function SignUpForms({ loadingProgress }) {
                         conosco.
                     </p>
 
-                    {loadingProgress >= 60 ? <h3 className="font-h3-32-ubuntu form-title"> Informações Pessoais </h3> : <h3 className="font-h3-32-ubuntu form-title"> Escolha seu plano </h3>}
+                    {loadingProgress <= 60 ? <h3 className="font-h3-32-ubuntu form-title"> Informações Pessoais </h3> : <h3 className="font-h3-32-ubuntu form-title"> Escolha seu plano </h3>}
                 </div>
 
                 <div style={{ width: 200, height: 200}} className="mt-5">
