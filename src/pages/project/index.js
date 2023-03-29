@@ -27,7 +27,7 @@ function IndexProject() {
                             </div>
                             <hr></hr>
                             <p className='font-h3-32-ubuntu'>Dados da empresa</p>
-                            <p className='font-18-ubuntu'>Solucções Tecno</p>
+                            <p className='font-18-ubuntu'>WoW ERP</p>
                         </div>
 
                     </div>
